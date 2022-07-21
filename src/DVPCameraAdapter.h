@@ -23,18 +23,18 @@ typedef struct
  */
 class DVPCameraAdapter:public CameraAdapter{
 public:
-    DVPCameraAdapter(pixformat_t pixFormat,framesize_t frameSize,dvp_info*dvpInfo);
+    DVPCameraAdapter(pixformat_t pixFormat,framesize_t frameSize,dvp_info *dvpInfo);
     virtual ~DVPCameraAdapter();
     virtual bool init() = 0;
     virtual bool deinit() = 0;
-    virtual cam_hal_frame_t*getFrame() = 0;
+    virtual cam_hal_frame_t* getFrame() = 0;
     virtual bool refundFrame() = 0;  
     virtual bool frameVerFlip(bool enable) = 0;
     virtual bool frameHorFlip(bool enable) = 0;
     virtual pixformat_t getPixFormat() = 0;
     virtual framesize_t getFrameSize() = 0;
 protected:
-    dvp_info*dvpInfo;
+    dvp_info *dvpInfo;
 };
 
 
