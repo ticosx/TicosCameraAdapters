@@ -9,7 +9,7 @@
  */
 class TK_EspCamera : public DVPCameraAdapter{
 public:
-    TK_EspCamera(camera_config_t*camCfg);
+    TK_EspCamera(camera_config_t *camCfg);
     virtual ~TK_EspCamera();
     virtual bool init() override ;
     virtual bool deinit() override ;
@@ -43,8 +43,8 @@ public:
 private:
     bool reinit();
     bool isInit;
-    sensor_t*sensor;
-    camera_fb_t*espFbBuf;
+    sensor_t *sensor;
+    camera_fb_t *espFbBuf;
     camera_config_t config;
 };
 
